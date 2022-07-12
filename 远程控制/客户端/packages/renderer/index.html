@@ -1,0 +1,81 @@
+<!--
+ * @Author: DragonL
+ * @Date: 2022-06-10 16:15:39
+ * @LastEditors: DragonL
+ * @LastEditTime: 2022-06-28 10:21:15
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- <script>
+    const nodeAbi = require('node-abi');
+    const error = document.getElementById('error');
+    const sel = document.getElementById('sel_val');
+    const txt = document.getElementById("txt_val");
+    function getAbi() {
+      try {
+        error.innerHTML = "";
+        const val = nodeAbi.getAbi(txt.value, sel.value);
+        document.getElementById('span_abi_val').innerHTML = val;
+      }
+      catch (ex) {
+        error.innerHTML = ex.message
+      }
+    }
+    function getTarget() {
+      try {
+        error.innerHTML = "";
+        const val = nodeAbi.getTarget(txt.value, sel.value)
+        document.getElementById('span_target_val').innerHTML = val;
+      }
+      catch (ex) {
+        error.innerHTML = ex.message
+      }
+    }
+  </script> -->
+  <!-- <script>
+    async function gg() {
+      let a = new RTCPeerConnection({
+        // iceServers: [
+        //   // { url: "stun:stun.l.google.com:19302" }
+        // ]
+      })
+      const streams = await navigator.mediaDevices.getUserMedia({
+        video: {
+          mandatory: {
+            chromeMediaSource: "desktop",
+            // chromeMediaSourceId: myStream.$myStream,
+          },
+        },
+        audio: false,
+        // chromeMediaSource: "desktop",
+      })
+      console.warn(streams.getTracks(), "streamsstreams")
+      // for (let i = 0; i < streams.getTracks().length; i++) {
+      //   a.addTrack(streams.getTracks()[i], streams)
+      // }
+      a.addStream(streams)
+      a.onicecandidate = (e) => {
+        console.warn(e)
+      }
+
+      let offer = await a.createOffer()
+      await a.setLocalDescription(offer)
+    }
+    gg()
+  </script> -->
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
