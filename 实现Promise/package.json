@@ -1,0 +1,16 @@
+{
+  "name": "prmise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test1.js",
+  "scripts": {
+    "test": "promises-aplus-tests index.js",
+    "testd": "promises-aplus-tests test1.js"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "promises-aplus-tests": "^2.1.2"
+  }
+}
