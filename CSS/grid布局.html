@@ -1,0 +1,139 @@
+<!--
+ * @Author: DragonL
+ * @Date: 2022-02-24 15:51:19
+ * @LastEditors: DragonL
+ * @LastEditTime: 2022-03-03 15:42:49
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div></div> -->
+    <div class="wrapper-5">
+        <div class="one item">One</div>
+        <div class="two item">Two</div>
+        <div class="three item">Three</div>
+        <div class="four item">Four</div>
+        <div class="five item">Five</div>
+        <div class="six item">Six</div>
+
+    </div>
+</body>
+<script>
+    // async function a() {
+    //     let res = await fetch("https://dp-website-api.xinyuanstu.com/api/culture/list")
+    //     return res.json()
+    // }
+    // a().then(res => {
+    //     console.warn(res.data.list)
+    // })
+    //repeat是重复的函数
+    //auto-fill 是自动填充 让一行尽可能容纳更多单元格
+    //fr就是一个将剩下的宽度或者长度几等分的一个关键字
+    //minmax就是一个函数第一个参数是最小值，第二个值是最大值
+    //auto 是由浏览器来决定长度，通过auto关键字来判断长度
+    //grid-gap 是grid-row-gap和grid-column-gap是简写  10px 20px 是row  column
+    //grid-template-areas可以用于定义区域，一个区域可以由多个单元格组成   例子：wrapper-area
+    //grid-auto-flow用于控制自动布局算法怎么运作 row就是先行后列 加上dense则是填满空间 column就是先列后行
+    //justify-items设置单元格内容用于控制左中右 algin-items控制上中下 stretch则是拉伸 占满单元格（宽度或者高度）
+    //justify-content是整个内容区域在容器中的水平位置 align-content是垂直位置
+    //grid-auto-rows和grid-auto-columns是在row或者column定义数量不够的时候所启动的
+    //grid-column-start,grid-column-end ,grid-row-start,grid-row-end就是用于指定边框的网格线
+</script>
+<style>
+    .wrapper-area {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 120px 120px 120px;
+        grid-template-areas:
+            ". header  header"
+            "sidebar content content";
+        background-color: #fff;
+        color: #444;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .content {
+        grid-area: content;
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .wrapper {
+        margin: 60px;
+        /* 声明一个容器 */
+        display: grid;
+        /*  声明列的宽度  */
+        grid-template-columns: repeat(auto-fill, 200px);
+        /*  声明行间距和列间距  */
+        grid-gap: 20px 10px;
+        /*  声明行的高度  */
+        grid-template-rows: 200px 200px;
+    }
+
+    .wrapper-3 {
+        display: grid;
+        grid-template-columns: 200px 1fr 2fr;
+        grid-gap: 5px;
+        grid-auto-rows: 50px;
+    }
+
+    .wrapper-4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr minmax(300px, 1fr);
+        grid-gap: 5px;
+        grid-auto-rows: 50px;
+    }
+
+    .wrapper-5 {
+        display: grid;
+        grid-template-columns: 100px auto 100px;
+        grid-gap: 5px;
+        grid-auto-rows: 50px;
+    }
+
+    .one {
+        background: #19CAAD;
+    }
+
+    .two {
+        background: #8CC7B5;
+    }
+
+    .three {
+        background: #D1BA74;
+    }
+
+    .four {
+        background: #BEE7E9;
+    }
+
+    .five {
+        background: #E6CEAC;
+    }
+
+    .six {
+        background: #ECAD9E;
+    }
+
+    .item {
+        text-align: center;
+        font-size: 200%;
+        color: #fff;
+    }
+</style>
+
+</html>
